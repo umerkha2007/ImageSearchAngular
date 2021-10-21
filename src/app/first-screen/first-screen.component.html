@@ -1,0 +1,50 @@
+<div class="wrapper wrapper-full-page">
+    <div class="page-header">
+        <!--   you can change the color of the filter page using: data-color="blue | purple | green | orange | red | rose " -->
+        <div style="height: 80px; width: 100%; background: #135eb2;"></div>
+        <!-- Sign In Layout -->
+        <div class="session-wrapper">
+            <div class="container container-full-width">
+                <div class="row">
+                    <div class="col-12 mx-auto">
+                        <div class="row no-gutters">
+                            <div class="col-sm-12 col-md-6 d-none d-md-block">
+                                <div class="card text-white border-rad shadow border-10 z-index">
+                                    <img class="card-img img-fluid" style="box-shadow: 0px 8px 10px gray,
+                -10px 8px 15px gray, 10px 8px 15px gray; height: 600px; border-radius: 1rem;" src="assets/img/login.png" alt="Card image" width="400" height="500" />
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-6 py-5">
+                                <div class="card border-0 p-4 rounded-0 card-shadow">
+                                    <form class="form" [formGroup]="firstNameForm" (ngSubmit)=onSubmit(firstNameForm)>
+                                        <div class="social-widget mb-4">
+                                            <h2 class="text-capitalize font-2x mb-4"><strong> First Screen</strong></h2>
+                                        </div>
+                                        <div class="mb-5">
+                                            <div class="form-group">
+                                                <!-- <label for="InputEmail1">Email Address</label> -->
+                                                <!-- <input type="email" class="form-control form-control-lg" id="InputEmail1" required> -->
+                                                <mat-form-field class="col-md-12">
+                                                    <input matInput formControlName="firstName" placeholder="Enter Your First Name" type="text" autocomplete="off">
+                                                </mat-form-field>
+                                                <!-- <div *ngIf="useremail.touched && useremail.invalid" style="color: red; float: right;">
+                                                    <div *ngIf="useremail.errors['required']">Email Required</div>
+                                                    <div *ngIf="useremail.errors['email']">*<strong>Invalid </strong> email.</div>
+
+                                                </div> -->
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <button mat-raised-button type="submit" class="btn btn-primary">Submit</button>
+                                            <!-- <button type="submit" [disabled]="!signInForm.valid" class="btn btn-info btn-fill btn-block btn-lg submit-btn">Sign In</button> -->
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
